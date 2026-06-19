@@ -108,7 +108,7 @@ export function Services() {
         >
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
             Specialized <br className="block md:hidden" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-medical-blue to-medical-teal">Treatments</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-medical-blue to-medical-teal">Medical Services</span>
           </h2>
           <p className="text-base md:text-lg text-gray-600 leading-relaxed px-2">
             Providing comprehensive, accessible, and high-quality healthcare facilities to the Kaluvai community under one roof.

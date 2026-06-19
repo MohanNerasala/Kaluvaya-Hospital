@@ -50,8 +50,7 @@ export function Facilities() {
         
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
-            Hospital <br className="block md:hidden" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-medical-blue to-medical-teal">Facilities</span>
+            Hospital <span className="text-transparent bg-clip-text bg-gradient-to-r from-medical-blue to-medical-teal">Facilities</span>
           </h2>
           
           {/* Desktop Description */}

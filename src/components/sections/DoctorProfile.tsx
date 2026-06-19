@@ -27,7 +27,7 @@ export function DoctorProfile() {
         >
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 md:mb-6 tracking-tight leading-tight">
             Expert Medical <br className="block md:hidden" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-medical-blue to-medical-teal">Leadership</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-medical-blue to-medical-teal">Care</span>
           </h2>
           <p className="text-base md:text-lg text-gray-600 px-4">
             Meet the experienced medical professional leading Kaluvai Hospital.

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export function Hero() {
   return (
-    <section id="home" className="relative bg-medical-light overflow-hidden pt-8 pb-28 lg:pt-20 lg:pb-32">
+    <section id="home" className="relative bg-medical-light overflow-hidden pt-8 pb-24 md:pt-20 md:pb-32 min-h-[calc(100svh-86px)] md:min-h-0 flex flex-col justify-center">
       {/* Background Decor - Removed heavy CSS blurs for maximum scroll performance */}
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-blue-50/20"></div>
       <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-teal-50/20"></div>
@@ -16,9 +16,9 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="max-w-2xl text-center lg:text-left mx-auto lg:mx-0 flex flex-col items-center lg:items-start will-change-transform"
+            className="w-full max-w-[430px] lg:max-w-2xl text-center lg:text-left mx-auto lg:mx-0 flex flex-col items-center lg:items-start will-change-transform"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-medical-blue text-sm font-semibold mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-medical-blue text-[13px] md:text-sm font-semibold mb-6">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-medical-blue opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-medical-blue"></span>
@@ -26,18 +26,25 @@ export function Hero() {
               Accepting Patients 24/7
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
+            {/* Desktop Heading */}
+            <h1 className="hidden md:block text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
               Trusted Hospital Care in <span className="text-transparent bg-clip-text bg-gradient-to-r from-medical-blue to-medical-teal">Kaluvai</span>
             </h1>
             
+            {/* Mobile Heading */}
+            <h1 className="md:hidden font-extrabold text-gray-900 leading-[1.15] mb-5 tracking-tight w-full" style={{ fontSize: 'clamp(34px, 9vw, 42px)' }}>
+              Trusted Hospital <br />
+              Care in <span className="text-transparent bg-clip-text bg-gradient-to-r from-medical-blue to-medical-teal">Kaluvai</span>
+            </h1>
+            
             {/* Desktop Description */}
-            <p className="hidden sm:block text-lg text-gray-600 mb-6 lg:mb-8 leading-relaxed">
+            <p className="hidden md:block text-lg text-gray-600 mb-8 leading-relaxed">
               Kaluvai Hospital provides 24/7 emergency care, experienced doctor consultation, lab testing, cabin rooms, and essential medical facilities for families in Kaluvai and nearby villages.
             </p>
             
-            {/* Mobile Description (Max 2 lines) */}
-            <p className="sm:hidden text-base text-gray-600 mb-6 leading-relaxed">
-              Trusted 24/7 emergency care, expert doctor consultation, and essential lab facilities in Kaluvai.
+            {/* Mobile Description */}
+            <p className="md:hidden text-[15px] text-gray-500 mb-8 leading-relaxed max-w-[320px]">
+              Trusted 24/7 emergency care, expert<br/> doctor consultation, and essential lab<br/> facilities in Kaluvai.
             </p>
             
             {/* Action Buttons */}
@@ -45,18 +52,18 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-10 w-full sm:w-auto px-2 md:px-0 will-change-transform"
+              className="flex flex-col md:flex-row justify-center lg:justify-start gap-3.5 md:gap-4 mb-10 w-full md:w-auto will-change-transform"
             >
               <a 
                 href="tel:+919999999999" 
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-medical-blue to-medical-teal md:bg-none md:bg-medical-blue hover:bg-blue-800 text-white px-8 py-3 md:py-3.5 rounded-2xl md:rounded-full font-bold md:font-medium text-base transition-all shadow-md shadow-teal-500/20 md:shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98]"
+                className="flex items-center justify-center gap-2 w-full md:w-auto bg-gradient-to-r from-medical-blue to-medical-teal md:bg-none md:bg-medical-blue hover:bg-blue-800 text-white h-[52px] md:h-auto md:px-8 md:py-3.5 rounded-[14px] md:rounded-full font-bold md:font-medium text-[16px] transition-all shadow-md active:scale-[0.98]"
               >
                 <PhoneCall className="h-5 w-5" />
                 <span>Call for Emergency</span>
               </a>
               <a 
                 href="#services" 
-                className="flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-gray-800 border border-gray-100 md:border-gray-200 px-8 py-3 md:py-3.5 rounded-2xl md:rounded-full font-bold md:font-medium text-base transition-all shadow-sm hover:shadow active:scale-[0.98]"
+                className="flex items-center justify-center gap-2 w-full md:w-auto bg-white hover:bg-gray-50 text-gray-800 border border-gray-100 md:border-gray-200 h-[52px] md:h-auto md:px-8 md:py-3.5 rounded-[14px] md:rounded-full font-bold md:font-medium text-[16px] transition-all shadow-sm active:scale-[0.98]"
               >
                 <span>View Services</span>
                 <ArrowRight className="h-5 w-5 text-medical-blue" />
@@ -68,31 +75,31 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="grid grid-cols-2 gap-4 w-full max-w-md lg:max-w-none text-left will-change-transform"
+              className="grid grid-cols-2 gap-x-2 gap-y-4 md:gap-4 w-full md:max-w-none text-left will-change-transform"
             >
-              <div className="flex items-center gap-3">
-                <div className="bg-blue-50 p-2 rounded-lg">
-                  <ShieldCheck className="h-5 w-5 text-medical-blue" />
+              <div className="flex items-center gap-2.5 md:gap-3 bg-white/40 md:bg-transparent p-2 md:p-0 rounded-xl md:rounded-none">
+                <div className="bg-blue-50 p-2 rounded-lg shrink-0">
+                  <ShieldCheck className="h-4 w-4 md:h-5 md:w-5 text-medical-blue" />
                 </div>
-                <span className="font-medium text-gray-800 text-xs sm:text-sm">10+ Years Experience</span>
+                <span className="font-medium text-gray-800 text-[11px] md:text-sm leading-tight">10+ Years<br className="md:hidden" /> <span className="hidden md:inline">Experience</span><span className="md:hidden">Experience</span></span>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-red-50 p-2 rounded-lg">
-                  <Clock className="h-5 w-5 text-red-500" />
+              <div className="flex items-center gap-2.5 md:gap-3 bg-white/40 md:bg-transparent p-2 md:p-0 rounded-xl md:rounded-none">
+                <div className="bg-red-50 p-2 rounded-lg shrink-0">
+                  <Clock className="h-4 w-4 md:h-5 md:w-5 text-red-500" />
                 </div>
-                <span className="font-medium text-gray-800 text-xs sm:text-sm">24/7 Emergency</span>
+                <span className="font-medium text-gray-800 text-[11px] md:text-sm leading-tight">24/7<br className="md:hidden" /> <span className="hidden md:inline">Emergency</span><span className="md:hidden">Emergency</span></span>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-teal-50 p-2 rounded-lg">
-                  <Activity className="h-5 w-5 text-medical-teal" />
+              <div className="flex items-center gap-2.5 md:gap-3 bg-white/40 md:bg-transparent p-2 md:p-0 rounded-xl md:rounded-none">
+                <div className="bg-teal-50 p-2 rounded-lg shrink-0">
+                  <Activity className="h-4 w-4 md:h-5 md:w-5 text-medical-teal" />
                 </div>
-                <span className="font-medium text-gray-800 text-xs sm:text-sm">Lab Tests Available</span>
+                <span className="font-medium text-gray-800 text-[11px] md:text-sm leading-tight">Lab Tests<br className="md:hidden" /> <span className="hidden md:inline">Available</span><span className="md:hidden">Available</span></span>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-green-50 p-2 rounded-lg">
-                  <BedSingle className="h-5 w-5 text-medical-green" />
+              <div className="flex items-center gap-2.5 md:gap-3 bg-white/40 md:bg-transparent p-2 md:p-0 rounded-xl md:rounded-none">
+                <div className="bg-green-50 p-2 rounded-lg shrink-0">
+                  <BedSingle className="h-4 w-4 md:h-5 md:w-5 text-medical-green" />
                 </div>
-                <span className="font-medium text-gray-800 text-xs sm:text-sm">Patient Cabin Rooms</span>
+                <span className="font-medium text-gray-800 text-[11px] md:text-sm leading-tight">Patient Cabin<br className="md:hidden" /> <span className="hidden md:inline">Rooms</span><span className="md:hidden">Rooms</span></span>
               </div>
             </motion.div>
           </motion.div>
