@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export function Hero() {
   return (
-    <section id="home" className="relative bg-medical-light overflow-hidden pt-8 pb-24 md:pt-20 md:pb-32 min-h-[calc(100svh-86px)] md:min-h-0 flex flex-col justify-center">
+    <section id="home" className="relative bg-medical-light overflow-hidden pt-4 pb-28 md:pt-20 md:pb-32 min-h-[calc(100svh-86px)] md:min-h-0 flex flex-col justify-center">
       {/* Background Decor - Removed heavy CSS blurs for maximum scroll performance */}
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-blue-50/20"></div>
       <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-teal-50/20"></div>
@@ -18,7 +18,7 @@ export function Hero() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="w-full max-w-[430px] lg:max-w-2xl text-center lg:text-left mx-auto lg:mx-0 flex flex-col items-center lg:items-start will-change-transform"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-medical-blue text-[13px] md:text-sm font-semibold mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-medical-blue text-[13px] md:text-sm font-semibold mb-3 md:mb-6">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-medical-blue opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-medical-blue"></span>
@@ -32,7 +32,7 @@ export function Hero() {
             </h1>
             
             {/* Mobile Heading */}
-            <h1 className="md:hidden font-extrabold text-gray-900 leading-[1.15] mb-5 tracking-tight w-full" style={{ fontSize: 'clamp(34px, 9vw, 42px)' }}>
+            <h1 className="md:hidden font-extrabold text-gray-900 leading-[1.15] mb-3 md:mb-5 tracking-tight w-full" style={{ fontSize: 'clamp(32px, 8.5vw, 42px)' }}>
               Trusted Hospital <br />
               Care in <span className="text-transparent bg-clip-text bg-gradient-to-r from-medical-blue to-medical-teal">Kaluvai</span>
             </h1>
@@ -43,7 +43,7 @@ export function Hero() {
             </p>
             
             {/* Mobile Description */}
-            <p className="md:hidden text-[15px] text-gray-500 mb-8 leading-relaxed max-w-[320px]">
+            <p className="md:hidden text-[14px] text-gray-500 mb-4 md:mb-8 leading-relaxed max-w-[320px]">
               Trusted 24/7 emergency care, expert<br/> doctor consultation, and essential lab<br/> facilities in Kaluvai.
             </p>
             
@@ -52,7 +52,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex flex-col md:flex-row justify-center lg:justify-start gap-3.5 md:gap-4 mb-10 w-full md:w-auto will-change-transform"
+              className="flex flex-col md:flex-row justify-center lg:justify-start gap-2.5 md:gap-4 mb-5 md:mb-10 w-[calc(100%+24px)] -ml-[12px] md:w-auto md:ml-0 will-change-transform"
             >
               <a 
                 href="tel:+919999999999" 
@@ -75,7 +75,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="grid grid-cols-2 gap-x-2 gap-y-4 md:gap-4 w-full md:max-w-none text-left will-change-transform"
+              className="grid grid-cols-2 gap-2 md:gap-6 w-full max-w-[340px] md:max-w-none mx-auto lg:mx-0 will-change-transform"
             >
               <div className="flex items-center gap-2.5 md:gap-3 bg-white/40 md:bg-transparent p-2 md:p-0 rounded-xl md:rounded-none">
                 <div className="bg-blue-50 p-2 rounded-lg shrink-0">

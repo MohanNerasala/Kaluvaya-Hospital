@@ -16,9 +16,9 @@ import { StickyCallButton } from './components/ui/StickyCallButton';
 
 function App() {
   return (
-    <div className="min-h-screen font-sans text-gray-800 selection:bg-medical-blue selection:text-white">
+    <div className="h-[100dvh] w-full font-sans text-gray-800 selection:bg-medical-blue selection:text-white flex flex-col overflow-hidden bg-white">
       <Header />
-      <main>
+      <main className="flex-1 overflow-y-auto overflow-x-hidden scroll-smooth relative" id="main-scroll-container">
         <Hero />
         <QuickContact />
         <About />
@@ -30,8 +30,8 @@ function App() {
         <PatientJourney />
         <Testimonials />
         <Contact />
+        <Footer />
       </main>
-      <Footer />
       <StickyCallButton />
     </div>
   );

@@ -4,8 +4,8 @@ import { PhoneCall } from 'lucide-react';
 export function StickyCallButton() {
   return (
     <div 
-      className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-100 shadow-[0_-8px_20px_rgba(0,0,0,0.06)] px-4 pt-3"
-      style={{ paddingBottom: 'max(1.5rem, env(safe-area-inset-bottom))' }}
+      className="md:hidden relative z-50 shrink-0 w-full bg-white border-t border-gray-100 shadow-[0_-8px_20px_rgba(0,0,0,0.06)] px-4 pt-4"
+      style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom, 1rem))' }}
     >
       <a 
         href="tel:+919999999999" 
