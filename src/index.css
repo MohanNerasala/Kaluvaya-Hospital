@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-medical-blue: #1e3a8a;
+  --color-medical-teal: #0d9488;
+  --color-medical-green: #10b981;
+  --color-medical-light: #f8fafc;
+  --font-sans: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-gray-800);
+  background-color: var(--color-white);
+}
