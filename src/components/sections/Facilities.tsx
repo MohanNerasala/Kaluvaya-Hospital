@@ -49,10 +49,19 @@ export function Facilities() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Hospital Facilities</h2>
-          <div className="w-24 h-1 bg-medical-blue mx-auto rounded-full mb-6"></div>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
+            Hospital <br className="block md:hidden" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-medical-blue to-medical-teal">Facilities</span>
+          </h2>
+          
+          {/* Desktop Description */}
+          <p className="hidden md:block text-lg text-gray-600 leading-relaxed">
             Equipped with essential medical infrastructure to ensure patient comfort, safety, and effective treatment.
+          </p>
+          
+          {/* Mobile Description (Max 2 lines) */}
+          <p className="md:hidden text-base text-gray-600 leading-relaxed px-4">
+            Essential medical infrastructure for your comfort, safety, and rapid recovery.
           </p>
         </div>
 

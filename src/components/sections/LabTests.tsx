@@ -19,18 +19,26 @@ export function LabTests() {
   return (
     <section id="lab" className="py-20 bg-medical-light relative overflow-hidden">
       
-      {/* Decor */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-medical-blue/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+      {/* Decor - Removed CSS blur for smooth scrolling */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50/30 rounded-full -mr-32 -mt-32"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="grid lg:grid-cols-12 gap-12 items-center">
-          
-          <div className="lg:col-span-5">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Lab Tests & Diagnostics</h2>
-            <div className="w-20 h-1 bg-medical-teal rounded-full mb-6"></div>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+          {/* Right: Content */}
+          <div className="lg:col-span-5 text-center md:text-left">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
+              Lab Tests & <br className="block md:hidden" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-medical-blue to-medical-teal">Diagnostics</span>
+            </h2>
+            {/* Desktop Description */}
+            <p className="hidden md:block text-lg text-gray-600 mb-8 leading-relaxed">
               Kaluvai Hospital provides convenient in-house lab testing and diagnostic support. Quick and reliable results ensure faster and more accurate treatment decisions for you and your family.
+            </p>
+            
+            {/* Mobile Description (Max 2 lines) */}
+            <p className="md:hidden text-base text-gray-600 mb-6 leading-relaxed px-2">
+              Quick and reliable in-house lab testing for accurate, faster treatment decisions.
             </p>
             
             <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex items-center gap-4">
